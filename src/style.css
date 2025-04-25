@@ -1,0 +1,134 @@
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #555;
+
+}
+
+.controls {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls input[type="file"],
+.controls input[type="number"],
+.controls button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebrar linha */
+}
+
+.image-container,
+.palette-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1; /* Faz com que ocupem espaço disponível */
+    min-width: 300px; /* Largura mínima */
+}
+
+#originalImage {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin-top: 10px;
+    border: 1px solid #eee;
+}
+
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    min-height: 50px; /* Altura mínima para visualização */
+    align-items: center;
+}
+
+
+
+/* Quadrado com as cores */
+.color-swatch {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); 
+    overflow: hidden;
+    text-align: center;
+}
+
+.status-message {
+    margin-top: 15px;
+    font-style: italic;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
